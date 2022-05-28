@@ -10,7 +10,8 @@ export default class Ant extends Component {
             <div>
                 <button onClick={(e) => {
                     console.log(e)
-                }}>点我</button>
+                }}>点我
+                </button>
                 <Button type="primary">按钮1</Button>
                 <Button>按钮2</Button>
                 <Button type="link">按钮3</Button>
