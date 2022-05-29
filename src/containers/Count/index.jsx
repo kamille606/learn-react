@@ -45,14 +45,6 @@ class Count extends Component {
     }
 }
 
-const mapStateToProps = state => ({count: state});
-
-const mapDispatchToProps = dispatch => ({
-    add: data => dispatch(createIncrementAction(data)),
-    sub: data => dispatch(createDecrementAction(data)),
-    addAsync: (data, time) => dispatch(createIncrementAsyncAction(data, time))
-});
-
 //创建暴露count的容器组件
 export default connect(
     state => ({count: state}),
