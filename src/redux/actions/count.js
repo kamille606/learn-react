@@ -1,7 +1,7 @@
 /**
  * 专门为count组件生成action对象
  */
-import {DECREMENT, INCREMENT} from "./constant";
+import {DECREMENT, INCREMENT} from "../constant";
 
 //action的值为对象就是同步action
 export const createIncrementAction = (data) => ({type: INCREMENT, data})

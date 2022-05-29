@@ -4,7 +4,7 @@ import {
     createDecrementAction,
     createIncrementAction,
     createIncrementAsyncAction
-} from "../../redux/count_action";
+} from "../../redux/actions/count";
 
 class Count extends Component {
     state = {carName: 'lain'}
@@ -30,8 +30,10 @@ class Count extends Component {
 
     render() {
         return (<div>
-            <h1>获取react属性:{this.state.carName}</h1>
-            <h1>当前求和为:{this.props.count}</h1>
+            <h2>我是Count组件</h2>
+            <h3>person组件人数:{this.props.personListLength}</h3>
+            <h3>获取react属性:{this.state.carName}</h3>
+            <h4>当前求和为:{this.props.count}</h4>
             <select ref={c => this.selectNumber = c}>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
@@ -47,7 +49,10 @@ class Count extends Component {
 
 //创建暴露count的容器组件
 export default connect(
-    state => ({count: state}),
+    state => ({
+        count: state.count,
+        personListLength: state.personList.length
+    }),
     {
         add: createIncrementAction,
         sub: createDecrementAction,
