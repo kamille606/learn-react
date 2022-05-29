@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import store from './redux/store'
 
 import Count from "./containers/Count";
 import Ant from "./conponents/Ant";
@@ -10,7 +9,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <Count store={store}/>
+                <Count/>
                 <Ant/>
             </div>
         )
