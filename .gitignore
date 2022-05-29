@@ -105,3 +105,4 @@ dist
 
 package.json.lock
 yarn.lock
+build
