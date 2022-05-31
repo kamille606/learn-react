@@ -11,7 +11,7 @@ import './App.css';
 export default class App extends Component {
     render() {
         return (
-            <div>
+            <>
                 <Hook/>
                 <hr/>
                 <Demo/>
@@ -21,7 +21,7 @@ export default class App extends Component {
                 <Person/>
                 <hr/>
                 <Ant/>
-            </div>
+            </>
         )
     }
 }
