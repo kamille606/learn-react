@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
-class Parent extends Component {
+class Parent extends PureComponent {
 
     state = {car: '奔驰'}
 
@@ -8,9 +8,9 @@ class Parent extends Component {
         this.setState({car: '迈巴赫'})
     }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return this.state.car !== nextState.car;
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     return this.state.car !== nextState.car;
+    // }
 
     render() {
         const {car} = this.state
@@ -25,11 +25,11 @@ class Parent extends Component {
     }
 }
 
-class Child extends Component {
+class Child extends PureComponent {
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return this.props.car !== nextProps.car;
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     return this.props.car !== nextProps.car;
+    // }
 
     render() {
         return (
