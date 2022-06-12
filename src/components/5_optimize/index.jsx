@@ -28,8 +28,7 @@ class Parent extends Component {
 class Child extends Component {
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log(nextState)
-        console.log(nextProps)
+        return this.props.car !== nextProps.car;
     }
 
     render() {
