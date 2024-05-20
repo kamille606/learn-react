@@ -6,7 +6,7 @@ import {Provider} from 'react-redux'
 import App from './App'
 
 ReactDOM.render(
-    /* Provider使所有子组件都能接收到store */
+    /* Provider使所有子组件都能接收到store123 */
     <Provider store={store}>
         <App/>
     </Provider>, document.getElementById('root')
